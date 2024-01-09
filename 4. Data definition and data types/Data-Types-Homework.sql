@@ -5,10 +5,12 @@ Id INT PRIMARY KEY NOT NULL,
 Age INT NOT NULL
 )
 
+
 CREATE TABLE Towns(
 Id INT PRIMARY KEY NOT NULL,
 [Name] NVARCHAR(100) NOT NULL
 )
+
 
 --3.
 ALTER TABLE Minions
@@ -17,6 +19,7 @@ ADD TownsId INT NOT NULL
 ALTER TABLE Minions
 ADD CONSTRAINT FK_Minions FOREIGN KEY (TownsId)
 REFERENCES Towns(Id)
+
 
 --4.
 INSERT INTO Towns
@@ -29,14 +32,17 @@ VALUES('Kevin', 22, 1),
 		('Bob', 15, 3),
 		('Steward', NULL, 2)
 
+
 --5.
 DELETE FROM Minions
+
 
 --6.
 DROP TABLE dbo.Minions
 GO
 DROP TABLE dbo.Towns
 GO
+
 
 --7.
 CREATE TABLE Peope (
@@ -50,6 +56,7 @@ Birthdate DATE NOT NULL,
 Biography NVARCHAR(MAX)
 )
 
+
 --8.
 CREATE TABLE Users(
 Id BIGINT PRIMARY KEY IDENTITY(1,1),
@@ -60,20 +67,24 @@ LastLoginTime DateTime2,
 IsDeleted BIT
 )
 
+
 --9.
 ALTER TABLE Users
 DROP CONSTRAINT PK_Id
 ALTER TABLE Users
 ADD PRIMARY KEY (Id, Username)
 
+
 --10.
 ALTER TABLE Users
 ADD CONSTRAINT CHK_UsernamePass CHECK ([Password] >= 5)
+
 
 --11.
 ALTER TABLE Users
 ADD CONSTRAINT DF_LastLoginTime
 DEFAULT GETDATE() FOR LastLoginTime
+
 
 --12.
 ALTER TABLE Users
@@ -82,6 +93,7 @@ ALTER TABLE Users
 ADD PRIMARY KEY (Id)
 ALTER TABLE Users
 ADD CONSTRAINT CHK_UsernameLength CHECK (Username >= 3)
+
 
 --13.
 CREATE TABLE Directors (
@@ -115,6 +127,7 @@ REFERENCES Directors(Id)
 ALTER TABLE Movies
 ADD CONSTRAINT FK_CategorieMovie 
 FOREIGN KEY (CategoryId) REFERENCES Categories(Id)
+
 
 --14.
 CREATE DATABASE CarRental
@@ -189,6 +202,7 @@ ADD CONSTRAINT FK_CustomerRentalOrder
 FOREIGN KEY (CustomerId) REFERENCES Customers(Id)
 GO
 
+
 --15.
 CREATE TABLE Employees(
 Id INT PRIMARY KEY IDENTITY(1,1),
@@ -252,6 +266,7 @@ FOREIGN KEY ([RoomStatus]) REFERENCES RoomStatus(RoomStatus),
 [Rate] DECIMAL(2,1),
 Notes NVARCHAR(MAX)
 )
+
 
 --16. 
 CREATE DATABASE SoftUni
@@ -326,6 +341,7 @@ FROM [dbo].[Departments]
 
 SELECT * 
 FROM [dbo].[Employees]
+
 
 --19.
  SELECT * 
