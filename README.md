@@ -4,7 +4,7 @@
 Every folder have two files: 1) *.docx with exercises  2) *.sql with solutions. 
 Main query language is T-SQL. My database tool is SQL Server Management Studio 19 and MS Word (2021) for description on exercises.
 
-## Table of content
+## Table of contents
 
 | id | Name|
 | ----: | ----:|
