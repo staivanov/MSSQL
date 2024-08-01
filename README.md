@@ -1,7 +1,7 @@
 ## MS SQL exercises and solution based on SoftUni course.
 
 ## **Description**
-Exercises and their solutions based on SoftUni course for MS SQL. Every folder have two files: 1) *.docx with exercises  2) *.sql with solutions. 
+Every folder have two files: 1) *.docx with exercises  2) *.sql with solutions. 
 Main query language is T-SQL. My database tool is SQL Server Management Studio 19 and MS Word (2021) for description on exercises.
 
 ## Requirements
